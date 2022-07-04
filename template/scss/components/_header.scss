@@ -1,0 +1,22 @@
+.header {
+    height: $distance-header;
+    border-bottom: 1px solid $color-border;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    z-index: 50;
+    background-color: white;
+    @include max($res-mobile) {
+        height: $distance-header-mobile;
+    }
+    &.sticky {
+        height: $distance-header-sticky;
+        background-color: white;
+        @include max($res-mobile) {
+            height: $distance-header-mobile-sticky;
+        }
+    }
+    &-logo {}
+}

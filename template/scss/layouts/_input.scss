@@ -1,0 +1,33 @@
+.input {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    &-area {
+        height: auto;
+    }
+}
+
+.form-fl {
+    @include flex-st;
+    margin: 0 -5px;
+    &-item {
+        padding: 0 5px;
+        &-2 {
+            width: calc(100%/2);
+        }
+        &-3 {
+            width: calc(100%/3);
+        }
+    }
+}
+
+.form-gr {
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.re {
+    &-input {}
+    &-label {}
+    &-area {}
+}

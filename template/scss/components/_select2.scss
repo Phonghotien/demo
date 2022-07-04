@@ -1,0 +1,107 @@
+.send-form-wr {
+  .select
+    // Bỏ thanh search
+    .select2-search .select2-search--dropdown {
+    display: none !important;
+  }
+
+  // Đổi font
+  .select2-container {
+    font-size: 14px;
+    width: 100% !important;
+  }
+
+  // Reset height
+  .select2-container--default .select2-selection--single {
+    border-radius: 8px !important;
+    margin-bottom: 5px;
+    &:focus {
+      border: 1px solid $color-pri;
+    }
+  }
+  .select2-container .select2-selection--single {
+    height: unset;
+  }
+
+  // Doi padding thanh result
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
+    line-height: unset;
+    height: 40px;
+    padding: 0 10px;
+    @include flex;
+    align-items: center;
+  }
+
+  // Doi style thanh result
+  .select2-container--default .select2-selection--single {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+  }
+
+  // Doi padding dropdown
+  .select2-results__option {
+    padding: 4px 19px;
+    @include max(575px) {
+      padding: 12px 16px 10px 16px;
+    }
+  }
+
+  // Doi hover dropdown
+  .select2-container--default
+    .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: $color-pri;
+  }
+
+  // Doi style option da chon dropdown
+  .select2-container--default .select2-results__option--selected {
+    background: #f5f5f5;
+  }
+
+  // Doi style dropdown
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
+    height: unset;
+    top: 54%;
+    transform: translateY(-50%);
+  }
+
+  .select2-dropdown {
+    animation: opacity 0.3s;
+  }
+
+  .select2-container--default .drop-ic {
+    transition: 0s;
+    position: relative;
+    right: 8px;
+  }
+
+  .rotate {
+    transform: rotate(-180deg);
+  }
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow
+    b {
+    border-color: #da251d transparent transparent transparent;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    height: 0;
+    left: 50%;
+    margin-left: -12px;
+    margin-top: -7px;
+    display: none;
+  }
+  .select2-selection__placeholder {
+    color: #c4c4c4 !important;
+  }
+  .select2-dropdown .select2-dropdown--below {
+    border-radius: 8px;
+  }
+  .select2-container--open .select2-dropdown--below {
+    border-radius: 8px !important;
+  }
+}
