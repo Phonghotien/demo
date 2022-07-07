@@ -4,13 +4,10 @@ export default function AosModule() {
         // startEvent: 'DOMContentLoaded',
         offset: 0,
         duration: 1200,
-        delay: '200',
-        easing: 'ease',
+        delay: "200",
+        easing: "ease",
         once: true,
-        mirror: true,
-        disable: function () {
-            return $(window).width() <= 768;
-        },
+        mirror: true
     });
     /** ANIMATION ON SCROLL - END */
 }

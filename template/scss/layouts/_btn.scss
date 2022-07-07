@@ -1,18 +1,38 @@
 .button {
     @include flex;
     align-items: center;
-
+    background-color: $color-white;
+    padding: 20px;
+    color: #4472C4;
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+    @include max(1200px) {
+        padding: 35%;
+    }
     &-text {
         font-weight: 1.4rem;
         line-height: 1.2;
         color: $color-black;
     }
-
     &-large {}
-
     &-nor {}
-
     &-small {}
-
     &-mini {}
+}
+
+.button-control {
+    position: absolute;
+    bottom: 0;
+    left: 80px;
+    display: flex;
+    align-items: center;
+    .button {
+        &:hover {
+            color: #fff;
+            background: #4472C4;
+        }
+    }
+    @include max(1200px) {
+        left: 20px;
+    }
 }

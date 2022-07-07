@@ -1,0 +1,73 @@
+.prodt {
+    &-flex {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &-wrap {
+        @include flex();
+        margin: 0 -15px;
+    }
+    &-col {
+        padding: 0 15px;
+        width: 50%;
+        .text-control {
+            span {
+                color: $color-black;
+            }
+        }
+        .button-show.button-back {
+            &:hover .arrow {
+                color: $color-pri;
+                background: unset;
+            }
+        }
+        .ourstories-ban-col {
+            width: 100%;
+        }
+    }
+    &-content {
+        height: 100%;
+        &-inner {
+            display: flex;
+            padding-left: 90px;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+        }
+    }
+    &-control {
+        position: absolute;
+        width: 88%;
+        bottom: 0;
+        left: 90px;
+        @include flex();
+        justify-content: space-between;
+        .story-all {
+            margin-left: unset;
+        }
+        .next {
+            .arrow {
+                padding: 14px;
+                font-weight: 800;
+            }
+            &:hover .arrow {
+                background-color: $color-pri;
+            }
+        }
+        .prev {
+            .arrow {
+                margin-left: unset;
+                padding: 14px;
+                font-weight: 800;
+            }
+            span {
+                padding-left: 8px;
+            }
+            &:hover .arrow {
+                background-color: $color-pri;
+            }
+        }
+    }
+}

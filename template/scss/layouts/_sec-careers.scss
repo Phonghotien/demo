@@ -1,0 +1,73 @@
+.sec-careers {}
+
+.careers {
+    &-flex {
+        @include flex();
+        margin: 0 -30px;
+        @include max(950px) {
+            flex-direction: column;
+        }
+    }
+    &-col-left {
+        width: 33%;
+        padding: 0 30px;
+        @include max(950px) {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+    &-col-right {
+        padding: 0 30px;
+        width: 67%;
+        @include max(950px) {
+            width: 100%;
+        }
+        &-flex {
+            @include flex();
+            @include max(950px) {
+                margin: 8px 0;
+            }
+        }
+        .story-text {
+            @include max(1200px) {
+                position: relative;
+            }
+        }
+    }
+    &-all {
+        margin-right: auto;
+        color: #0A1522;
+        font-weight: 500;
+        font-size: 1.6rem;
+        .arrow {
+            font-size: 1rem;
+            margin-left: 8px;
+            background-color: #92D050;
+            padding: 6px;
+        }
+        span {
+            padding-left: unset;
+            color: #0A1522;
+        }
+    }
+    &-button {
+        margin-top: auto;
+        position: unset;
+        bottom: unset;
+        left: unset;
+        margin-left: auto;
+        @include max(1200px) {
+            margin-left: unset;
+        }
+        .button {
+            font-size: 2rem;
+            &:hover {
+                color: #92D050;
+                transition: 0.3s ease-in-out;
+            }
+        }
+        .arrow:nth-child(1) {
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    }
+}

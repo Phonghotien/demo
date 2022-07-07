@@ -1,0 +1,119 @@
+.footer {
+    padding-top: 60px;
+    &-wrap {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    &-flex {
+        padding-bottom: 60px;
+        @include flex();
+        @include max(850px) {
+            flex-direction: column;
+            flex-wrap: wrap;
+            padding-bottom: 16px;
+        }
+    }
+    &-col-right {
+        width: 30%;
+        margin-left: auto;
+        @include max(850px) {
+            width: 100%;
+        }
+    }
+    &-col-center {
+        width: 25%;
+        @include max(850px) {
+            width: 100%;
+        }
+    }
+    &-col-left {
+        width: fit-content;
+        margin-right: auto;
+        @include max(850px) {
+            width: 100%;
+        }
+    }
+    &-item {}
+    &-logo {
+        @include max(850px) {
+            text-align: center
+        }
+    }
+    &-address {
+        @include fz-14;
+        font-weight: 400;
+        @include flex();
+        flex-direction: column;
+        padding-left: 30px;
+        border-left: 1px solid rgba($color: #000000, $alpha: 0.1);
+        @include max(850px) {
+            padding-top: 16px;
+            padding-left: unset;
+            border: unset;
+        }
+        span {
+            font-weight: 600;
+            @include fz-14;
+            color: $color-third;
+        }
+        & p:nth-child(2) {
+            padding: 14px 0;
+        }
+    }
+    &-link {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 30px;
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        @include flex();
+        margin-top: -16px;
+        @include max(850px) {
+            padding-top: 16px;
+            padding-left: unset;
+            border-left: unset;
+        }
+        .link-item {
+            width: 50%;
+            padding-top: 16px;
+            @include max(850px) {
+                width: auto;
+                margin-right: 16px;
+            }
+        }
+        .link-item:nth-child(even) {
+            .link {
+                margin-left: auto;
+            }
+        }
+        .link .arrow {
+            border-radius: 100px;
+            padding: 10px;
+            color: $color-second;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .link-text {
+            display: block;
+            font-weight: 400;
+            @include fz-14;
+            color: $color-pri;
+            padding-left: 10px;
+        }
+    }
+    &-end {
+        &-wrap {
+            @include flex();
+            padding-top: 20px;
+            @include max(450px) {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    }
+    &-mxh {
+        display: flex;
+        margin-left: auto;
+        @include max(450px) {
+            margin: auto;
+        }
+    }
+}

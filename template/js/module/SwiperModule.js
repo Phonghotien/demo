@@ -1,152 +1,119 @@
 export default function SwiperModule() {
-    var storySlider = new Swiper(".story-slider", {
-        // freeMode: true,
-        watchSlidesProgress: true,
-        speed: 1200,
-        autoplay: {
-            delay: 3000,
-        },
-        pagination: {
-            el: '.story .swiper-pagination',
-            type: 'bullets',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.story .swiper-next',
-            prevEl: '.story .swiper-prev',
-        },
-        // slidesPerGroup: 2,
+    const swiper_ban = new Swiper(".swiper-ban", {
+        // Optional parameters
         loop: true,
-        spaceBetween: 32,
-        // effect: 'fade',
+
+        // If we need pagination
+        pagination: {
+            el: ".swiper-pagination"
+        },
+        speed: 1500,
+        effect: "fade",
         fadeEffect: {
             crossFade: true
         },
+        autoplay: {
+            delay: 5000
+        },
+        // Navigation arrows
+        navigation: {
+            nextEl: ".home-banner .swiper-button-next",
+            prevEl: ".home-banner .swiper-button-prev"
+        }
+
+        // And if we need scrollbar
+    });
+    const swiper_story = new Swiper(".swiper-story", {
+        // Optional parameters
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: ".swiper-pagination"
+        },
+        slidesPerView: 2,
+        speed: 1500,
+        effect: "slice",
+        spaceBetween: 30,
+        fadeEffect: {
+            crossFade: true
+        },
+        autoplay: {
+            delay: 5000
+        },
         breakpoints: {
+            // when window width is >= 320px
+            // when window width is >= 640px
             0: {
-                slidesPerView: 1.2,
+                slidesPerView: 1
             },
-            500: {
-                slidesPerView: 2.2,
-
+            400: {
+                slidesPerView: 1.2
             },
-            768: {
-                slidesPerView: 3,
-
-            },
-            1200: {
-                slidesPerView: 3,
+            650: {
+                slidesPerView: 2
             }
         }
+        // And if we need scrollbar
     });
-    const slidedbAll = document.querySelectorAll('.slidedb-slider-all')
-    if (slidedbAll) {
-        slidedbAll.forEach(item => {
-            const slidedbMain = item.querySelector('.slidedb-slider-main')
-            const swiperMain = slidedbMain.querySelector('.swiper')
-            const nextMain = slidedbMain.querySelector('.swiper-next')
-            const prevMain = slidedbMain.querySelector('.swiper-prev')
-            const pagiMain = slidedbMain.querySelector('.swiper-pagination')
+    const swiper_ourproduct = new Swiper(".swiper-ourproduct", {
+        // Optional parameters
+        loop: true,
 
+        // If we need pagination
+        pagination: {
+            el: ".swiper-pagination"
+        },
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+        slidesPerView: "auto",
+        speed: 1200,
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        },
+        autoplay: {
+            delay: 5000
+        },
+        // Navigation arrows
+        navigation: {
+            nextEl: ".ourproduct-img .swiper-button-next",
+            prevEl: ".ourproduct-img .swiper-button-prev"
+        }
+    });
+    const swiper_careers = new Swiper(".swiper-careers", {
+        // Optional parameters
+        loop: true,
 
-
-            const slidedbSub = item.querySelector('.slidedb-slider-sub')
-            const swiperSub = slidedbSub.querySelector('.swiper')
-            const nextSub = slidedbMain.querySelector('.swiper-next')
-            const prevSub = slidedbMain.querySelector('.swiper-prev')
-            const pagiSub = slidedbMain.querySelector('.swiper-pagination')
-
-
-            var slidedbSubSlider = new Swiper(swiperSub, {
-                // freeMode: true,
-                watchSlidesProgress: true,
-                // grabCursor: true,
-                speed: 1200,
-                // autoplay: {
-                //     delay: 3000,
-                // },
-                centeredSlides: false,
-                pagination: {
-                    el: pagiSub,
-                    type: "bullets",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: nextSub,
-                    prevEl: prevSub,
-                },
-                // slidesPerGroup: 2,
-                loop: false,
-                spaceBetween: 16,
-
-                // effect: 'fade',
-                fadeEffect: {
-                    crossFade: true,
-                },
-                breakpoints: {
-                    0: {
-                        slidesPerView: 4,
-                        spaceBetween: 8,
-
-                    },
-                    500: {
-                        slidesPerView: 4,
-                    },
-                    1200: {
-                        slidesPerView: 4,
-                    },
-                },
-            });
-            var slidedbMainSlider = new Swiper(swiperMain, {
-                // freeMode: true,
-                watchSlidesProgress: true,
-                // grabCursor: true,
-                speed: 1200,
-                // autoplay: {
-                //     delay: 3000,
-                // },
-                centeredSlides: false,
-                pagination: {
-                    el: pagiMain,
-                    type: "bullets",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: nextMain,
-                    prevEl: prevMain,
-                },
-                // slidesPerGroup: 2,
-                loop: true,
-                spaceBetween: 0,
-                slidesPerView: 1,
-
-                effect: 'fade',
-                fadeEffect: {
-                    crossFade: true,
-                },
-                // breakpoints: {
-                //   0: {
-                //     slidesPerView: 1.2,
-                //     spaceBetween: 10,
-                //     centeredSlides: false,
-                //   },
-                //   500: {
-                //     slidesPerView: 2,
-                //     spaceBetween: 10,
-                //   },
-                //   768: {
-                //     slidesPerView: 2.8,
-                //   },
-                //   1200: {
-                //     slidesPerView: 1,
-                //   },
-                // },
-                thumbs: {
-                    swiper: slidedbSubSlider,
-                },
-            });
-        })
-    }
-
-
+        // If we need pagination
+        pagination: {
+            el: ".swiper-pagination"
+        },
+        spaceBetween: 30,
+        slidesPerView: 2,
+        speed: 1300,
+        effect: "slice",
+        fadeEffect: {
+            crossFade: true
+        },
+        navigation: {
+            nextEl: ".careers-col-right .swiper-button-next",
+            prevEl: ".careers-col-right .swiper-button-prev"
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            // when window width is >= 640px
+            0: {
+                slidesPerView: 1
+            },
+            320: {
+                slidesPerView: 1
+            },
+            550: {
+                slidesPerView: 2
+            }
+        }
+        // And if we need scrollbar
+    });
 }

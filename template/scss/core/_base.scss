@@ -1,5 +1,5 @@
+@import url("../assets/font/SF-Pro-Display/stylesheet.css");
 @import url("../assets/font/Themify/stylesheet.css");
-@import url("../assets/font/Roboto/stylesheet.css");
 * {
     box-sizing: border-box;
 }
@@ -10,12 +10,13 @@ html {
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "SF Pro Display", sans-serif;
     font-size: 14px;
     line-height: 1.55;
     font-weight: 400;
     color: #000000;
     overflow: hidden / auto;
+    letter-spacing: 0.02em;
 }
 
 a {
@@ -38,6 +39,26 @@ select {
     height: 100%;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.container-two {
+    overflow: hidden;
+    margin-left: auto;
+    width: calc(100vw - ((100vw - 1170px) / 2));
+    max-width: 100%;
+    @include max(1200px) {
+        padding: 0 15px;
+    }
+}
+
+.container-careers {
+    overflow: hidden;
+    margin-left: auto;
+    width: calc(100vw - ((100vw - 1170px) / 2));
+    max-width: 100%;
+    @include max(1200px) {
+        padding: 0 15px;
+    }
 }
 
 .over {

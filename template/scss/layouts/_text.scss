@@ -118,3 +118,103 @@
 .t72 {
     @include fz-72
 }
+
+.title-h2 {
+    line-height: 1.2;
+    font-weight: 500;
+    @include fz-40;
+    color: $color-pri;
+    margin-bottom: 24px;
+}
+
+.title-h3 {
+    @include fz-24;
+    color: $color-pri;
+    font-weight: 500;
+}
+
+.title-h4 {
+    @include fz-24;
+    color: $color-pri;
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+.title-author {
+    @include fz-14;
+    font-weight: 400;
+    color: $color-pri;
+    opacity: 0.7;
+}
+
+.title-heading {
+    @include fz-16;
+    color: $color-pri;
+    font-weight: 400;
+    opacity: 0.7;
+    padding-right: 2.6rem;
+}
+
+.title-h5 {
+    font-weight: 600;
+    padding: 24px 0;
+    @include fz-16;
+    color: $color-pri
+}
+
+.title-more {
+    @include fz-14;
+    font-weight: 600;
+    color: $color-second;
+    margin-top: auto;
+    transition: all 0.3s ease-in 0s;
+    &:hover {
+        color: $color-pri;
+    }
+}
+
+.title-text {
+    font-weight: 600;
+    @include fz-16;
+    color: $color-pri;
+    opacity: 0.7;
+}
+
+.hot-line {
+    color: $color-second;
+    @include fz-24;
+    font-weight: 600;
+}
+
+// padding
+.pd-sec {
+    padding-top: 100px;
+    @include max(1200px) {
+        padding-top: 30px;
+    }
+}
+
+.pd-t-70 {
+    padding-top: 70px;
+    @include max(1200px) {
+        padding-top: 20px;
+    }
+}
+
+.pd-30 {
+    padding: 30px 0;
+    @include max(1200px) {
+        padding: 15px 0;
+    }
+}
+
+.pd-bt-100 {
+    padding-bottom: 100px;
+    @include max(1200px) {
+        padding-bottom: 16px;
+    }
+}
+
+.block {
+    display: block;
+}
